@@ -10,10 +10,11 @@ from utils import (validar_numero_nequi, validar_numero_ahorro_mano, validar_num
                   validar_monto_personalizado)
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY', 'clave_secreta_cajero_automatico')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'clave_secreta_cajero_automatico')
 
 # Configuración de carpetas estáticas
 app.static_folder = 'static'
+app.template_folder = 'templates'
 
 # Rutas de la aplicación
 @app.route('/')
