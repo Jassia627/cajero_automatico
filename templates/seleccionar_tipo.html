@@ -1,0 +1,255 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="select-container">
+    <div class="select-content">
+        <div class="header">
+            <h1>Selecciona tu tipo de cuenta</h1>
+            <p class="subtitle">Elige el método que prefieras para realizar tu retiro</p>
+        </div>
+
+        <div class="cards-container">
+            <div class="card" onclick="window.location.href='{{ url_for('nequi') }}'">
+                <div class="card-icon nequi">
+                    <img src="{{ url_for('static', filename='images/nequi.png') }}" alt="Nequi">
+                </div>
+                <div class="card-content">
+                    <h3>Nequi</h3>
+                    <p>Retira dinero usando tu número de celular</p>
+                    <span class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='{{ url_for('ahorro_mano') }}'">
+                <div class="card-icon ahorro-mano">
+                    <img src="{{ url_for('static', filename='images/ahorro a la mano.png') }}" alt="Ahorro a la Mano">
+                </div>
+                <div class="card-content">
+                    <h3>Ahorro a la Mano</h3>
+                    <p>Accede a tu cuenta de ahorro simplificada</p>
+                    <span class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='{{ url_for('cuenta_ahorros') }}'">
+                <div class="card-icon cuenta-ahorros">
+                    <img src="{{ url_for('static', filename='images/cuenta de ahorro.png') }}" alt="Cuenta de Ahorros">
+                </div>
+                <div class="card-content">
+                    <h3>Cuenta de Ahorros</h3>
+                    <p>Retira desde tu cuenta de ahorros tradicional</p>
+                    <span class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <a href="{{ url_for('index') }}" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            <span>Volver al inicio</span>
+        </a>
+    </div>
+</div>
+
+<style>
+.select-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.select-content {
+    width: 90%;
+    max-width: 900px;
+    animation: fadeIn 0.8s ease-out;
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.card {
+    background: transparent;
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    min-width: 200px;
+    box-shadow: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #007bff;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.75rem;
+}
+
+.card-content h3 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.card-content p {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.card-arrow {
+    color: #007bff;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 0.625rem 1.25rem;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #dee2e6;
+    align-self: center;
+}
+
+.back-button:hover {
+    background: rgba(0,0,0,0.05);
+    color: #495057;
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .select-content {
+        gap: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-content h3 {
+        font-size: 1rem;
+    }
+
+    .card-content p {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .back-button {
+        width: 100%;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+</style>
+
+<!-- Agregar Font Awesome para los iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+{% endblock %}

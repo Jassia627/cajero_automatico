@@ -1,0 +1,34 @@
+Date : 2025-03-16 17:22:25
+Directory : c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates
+Total : 10 files,  1199 codes, 7 comments, 192 blanks, all 1398 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| HTML     |         10 |      1,199 |          7 |        192 |      1,398 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                         | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                            |         10 |      1,199 |          7 |        192 |      1,398 |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                     | language | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\404.html               | HTML     |         10 |          0 |          1 |         11 |
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\ahorro_mano.html       | HTML     |         75 |          1 |         13 |         89 |
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\clave_temporal.html    | HTML     |        154 |          0 |         29 |        183 |
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\cuenta_ahorros.html    | HTML     |         70 |          1 |         12 |         83 |
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\index.html             | HTML     |         10 |          0 |          2 |         12 |
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\layout.html            | HTML     |         26 |          0 |          4 |         30 |
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\nequi.html             | HTML     |        166 |          1 |         29 |        196 |
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\resultado_retiro.html  | HTML     |        484 |          3 |         71 |        558 |
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\seleccionar_monto.html | HTML     |        175 |          1 |         27 |        203 |
+| c:\Users\juan-\OneDrive\Documentos\proyects\python\cajeoo\cajero_automatico\templates\seleccionar_tipo.html  | HTML     |         29 |          0 |          4 |         33 |
+| Total                                                                                                        |          |      1,199 |          7 |        192 |      1,398 |
++--------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
